@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CleanPro Toilet Cleaner</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Additional Styles for Contact Page */
+        .page-hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)),
+                        url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            margin-top: 70px;
+        }
+        
+        .page-hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            padding: 80px 0;
+        }
+        
+        .contact-info {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 10px;
+        }
+        
+        .contact-info h2 {
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+        
+        .contact-icon {
+            background: #3498db;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .contact-details h3 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+            font-size: 20px;
+        }
+        
+        .contact-details p {
+            color: #7f8c8d;
+            line-height: 1.6;
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .contact-form h2 {
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            transition: border 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+        
+        .form-submit {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+        
+        .form-submit:hover {
+            background: #2980b9;
+        }
+        
+        .map-section {
+            padding: 0 0 80px;
+        }
+        
+        .map-container {
+            height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .business-hours {
+            background: #2c3e50;
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        
+        .business-hours h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .emergency-contact {
+            background: #e74c3c;
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        .emergency-contact h3 {
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+        
+        .emergency-contact p {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .page-hero h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919876543210?text=Hello%20CleanPro%2C%20I%20want%20to%20order%20toilet%20cleaner" 
+       class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <h1>Clean<span>Pro</span></h1>
+                    <p class="tagline">Sparkling Clean Toilets</p>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="products.html"><i class="fas fa-shopping-cart"></i> Products</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="contact.html" class="active"><i class="fas fa-phone-alt"></i> Contact</a></li>
+                    <li><a href="#order" class="btn-order">Order Now</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Contact CleanPro</h1>
+            <p>We're Here to Help You with Sparkling Clean Bathrooms</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Our Office</h3>
+                            <p>
+                                CleanPro Industries<br>
+                                Plot No. 45, Industrial Area<br>
+                                Sector 62, Noida<br>
+                                Uttar Pradesh - 201301<br>
+                                India
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone Numbers</h3>
+                            <p>
+                                <strong>Customer Care:</strong> +91 98765 43210<br>
+                                <strong>WhatsApp Orders:</strong> +91 98765 43210<br>
+                                <strong>Bulk Orders:</strong> +91 98765 43211<br>
+                                <strong>Complaints:</strong> +91 98765 43212
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email Address</h3>
+                            <p>
+                                <strong>Orders:</strong> orders@cleanpro.com<br>
+                                <strong>Support:</strong> support@cleanpro.com<br>
+                                <strong>Partnership:</strong> partners@cleanpro.com<br>
+                                <strong>Careers:</strong> careers@cleanpro.com
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Business Hours</h3>
+                            <p>
+                                <strong>Monday - Friday:</strong> 9:00 AM - 8:00 PM<br>
+                                <strong>Saturday:</strong> 10:00 AM - 6:00 PM<br>
+                                <strong>Sunday:</strong> 10:00 AM - 4:00 PM<br>
+                                <strong>WhatsApp Orders:</strong> 24/7 Available
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h2>Send Us a Message</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your 10-digit mobile number" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email address">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject">
+                                <option value="">Select a subject</option>
+                                <option value="order">Order Inquiry</option>
+                                <option value="product">Product Information</option>
+                                <option value="bulk">Bulk Order</option>
+                                <option value="distributor">Distributorship</option>
+                                <option value="complaint">Complaint</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="form-submit">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                        
+                        <p class="form-note" style="margin-top: 15px; color: #7f8c8d; font-size: 14px;">
+                            * We'll contact you within 2 hours during business hours
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Contact -->
+    <section class="emergency-contact-section">
+        <div class="container">
+            <div class="emergency-contact">
+                <h3><i class="fas fa-exclamation-triangle"></i> For Urgent Orders & Support</h3>
+                <p><i class="fab fa-whatsapp"></i> WhatsApp: +91 98765 43210 (24/7)</p>
+                <p style="margin-top: 10px; font-size: 16px;">We respond within 15 minutes!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">Find Us Here</h2>
+            <div class="map-container">
+                <!-- Google Map Embed -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.730520088037!2d77.36287697526788!3d28.553757075710213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a431733515%3A0x1d1e2b7c5c8c8c8c!2sNoida%20Sector%2062%2C%20Noida%2C%20Uttar%20Pradesh%20201301!5e0!3m2!1sen!2sin!4v1629876543210!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+            
+            <div class="business-hours">
+                <h3><i class="fas fa-clock"></i> Visit Our Office</h3>
+                <ul class="hours-list">
+                    <li>
+                        <span>Monday - Friday</span>
+                        <span>9:00 AM - 8:00 PM</span>
+                    </li>
+                    <li>
+                        <span>Saturday</span>
+                        <span>10:00 AM - 6:00 PM</span>
+                    </li>
+                    <li>
+                        <span>Sunday</span>
+                        <span>10:00 AM - 4:00 PM</span>
+                    </li>
+                    <li>
+                        <span>Public Holidays</span>
+                        <span>11:00 AM - 3:00 PM</span>
+                    </li>
+                </ul>
+                <p style="margin-top: 20px; font-size: 14px; opacity: 0.8;">
+                    <i class="fas fa-info-circle"></i> Please call before visiting to ensure someone is available to assist you.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Contact -->
+    <section class="quick-contact">
+        <div class="container">
+            <div class="quick-contact-grid">
+                <div class="quick-card">
+                    <div class="quick-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp Order</h3>
+                    <p>+91 98765 43210</p>
+                    <a href="https://wa.me/919876543210" class="quick-link" target="_blank">Click to Chat</a>
+                </div>
+                <div class="quick-card">
+                    <div class="quick-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Call Now</h3>
+                    <p>+91 98765 43210</p>
+                    <a href="tel:+919876543210" class="quick-link">Call Now</a>
+                </div>
+                <div class="quick-card">
+                    <div class="quick-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>support@cleanpro.com</p>
+                    <a href="mailto:support@cleanpro.com" class="quick-link">Send Email</a>
+                </div>
+                <div class="quick-card">
+                    <div class="quick-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Live Chat</h3>
+                    <p>Available 10AM-6PM</p>
+                    <a href="#" class="quick-link" id="liveChatBtn">Start Chat</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Clean<span>Pro</span></h3>
+                    <p>India's trusted toilet cleaner brand. Making bathrooms sparkle since 2024.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope"></i> info@cleanpro.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Delhi, India</li>
+                        <li><i class="fab fa-whatsapp"></i> WhatsApp: +91 98765 43210</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Business Hours</h4>
+                    <ul class="business-hours">
+                        <li>Mon - Sat: 9AM - 8PM</li>
+                        <li>Sunday: 10AM - 6PM</li>
+                        <li>24/7 WhatsApp Orders</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CleanPro Toilet Cleaner. All rights reserved. | Made with ❤️ in India</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Contact Form Submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Create WhatsApp message
+            const whatsappMessage = `New Contact Form Message from CleanPro Website:%0A%0A` +
+                                   `Name: ${name}%0A` +
+                                   `Phone: ${phone}%0A` +
+                                   `Email: ${email || 'Not provided'}%0A` +
+                                   `Subject: ${subject || 'Not specified'}%0A` +
+                                   `Message: ${message}`;
+            
+            // Open WhatsApp
+            window.open(`https://wa.me/919876543210?text=${whatsappMessage}`, '_blank');
+            
+            // Show success message
+            alert('Thank you! Opening WhatsApp to send your message. We will contact you soon.');
+            
+            // Reset form
+            this.reset();
+        });
+        
+        // Live Chat Button
+        document.getElementById('liveChatBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            const currentHour = new Date().getHours();
+            if (currentHour >= 10 && currentHour < 18) {
+                window.open('https://wa.me/919876543210?text=Hello%20CleanPro%2C%20I%20need%20live%20chat%20support', '_blank');
+            } else {
+                alert('Live chat is available from 10AM to 6PM. Please use WhatsApp for 24/7 support.');
+            }
+        });
+    </script>
+</body>
+</html>
